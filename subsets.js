@@ -8,13 +8,29 @@
 // returns [[],[1],[2], [1, 2], [3], [1, 3], [2, 3], [1, 2, 3]]
 
 function subsets(num){
-    const output = []
-    helper()
-    return output
+    const result = []
+    const partialSolution = []
+    // starting state (0, [], num, result)
+    helper(0, partialSolution, num, result)
+    return result
 }
 
-function helper(){
-    
+function helper(i, path, input, output){
+    // path is current subset
+    // base case
+    if (i === input.length){
+
+    }
+
+    // recursive call
+    // exclusion
+        // increment index
+    helper(i + 1, path, input, output)
+    // inclusion
+        // increment index 
+        // add element to array
+    path.push(input[i])
+    helper(i + 1, path, input, output)
 }
 
 // Big O
