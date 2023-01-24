@@ -19,7 +19,11 @@ function helper(i, path, input, output){
     // path is current subset
     // base case
     if (i === input.length){
-
+        // make a copy of path
+        // push copy of path to output
+        // spread operator or path.slice()
+        output.push([...path])
+        return
     }
 
     // recursive call
@@ -28,11 +32,26 @@ function helper(i, path, input, output){
     helper(i + 1, path, input, output)
     // inclusion
         // increment index 
-        // add element to array
+        // add element to path
     path.push(input[i])
     helper(i + 1, path, input, output)
+    path.pop()
+    // put path back to former state to avoid duplicates 
+    return
 }
 
 // Big O
     // Time O(n^2)
     // Space O(n)
+
+// my old solution
+var subsets = function(nums) {
+    const res = [[]];
+    for (let i = 0; i < nums.length; i++) {
+        const size = res.length;
+        for (let j = 0; j < size; j++) {
+        res.push([...res[j], nums[i]]);
+        }
+    }
+    return res;
+    };
