@@ -8,5 +8,15 @@
 // returns [[],[1],[2], [1, 2], [3], [1, 3], [2, 3], [1, 2, 3]]
 
 function subsets(num){
-
+    const output = []
+    helper()
+    return output
 }
+
+function helper(){
+    
+}
+
+// Big O
+    // Time O(n^2)
+    // Space O(n)
