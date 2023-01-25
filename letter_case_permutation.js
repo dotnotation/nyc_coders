@@ -1,5 +1,6 @@
 // takes in a string
 // transform each character to be upper or lowercase to create another string
+// need to check if character is a number or not as we don't want to upper/lowercase a number
 // return a list of all possible strings
 // return the output in any order
 
@@ -32,3 +33,6 @@ function helper(i, path, input, output){
 
     return
 }
+
+// Big O
+    // Time complexity = number of base cases * TC of array copy + number of intermediate cases
