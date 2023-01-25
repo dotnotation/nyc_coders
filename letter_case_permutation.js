@@ -4,5 +4,26 @@
 // return the output in any order
 
 function letterCasePermutation(s){
+    const result = []
+    helper(0, '', s, result)
+    return result
+}
 
+function helper(i, path, input, output){
+    // base case
+    if (i === input.length){
+        // strings are immutable 
+        output.push(path)
+    }
+
+    // recursive case
+    // if character include lower and upper
+    if (isNaN(input[i])){
+        // add lowercase
+
+        // add uppercase
+    }
+    // else add digit
+
+    return
 }
